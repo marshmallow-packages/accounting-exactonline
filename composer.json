@@ -1,5 +1,5 @@
 {
-    "name": "marshmallow/package-exactonline",
+    "name": "marshmallow/accounting-exactonline",
     "description": "Connect Laravel to Exact Online.",
     "keywords": [
         "Exact Online",
