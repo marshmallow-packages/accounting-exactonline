@@ -1,0 +1,50 @@
+{
+    "name": "marshmallow/package-exactonline",
+    "description": "Connect Laravel to Exact Online.",
+    "keywords": [
+        "Exact Online",
+        "marshmallow"
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./nova-components/ExactOnline"
+        }
+    ],
+    "homepage": "https://github.com/Marshmallow-Development/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stef van Esch",
+            "email": "stef@marshmallow.dev"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "pendonl/laravel-exact-online": "dev-master"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Marshmallow\\ExactOnline\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Marshmallow\\ExactOnline\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Marshmallow\\ExactOnline\\ToolServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

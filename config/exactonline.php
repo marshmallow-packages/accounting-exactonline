@@ -1,0 +1,58 @@
+<?php
+
+return [
+    'mapping' => [
+        'prospect' => [
+            'AddressLine1' => 'address',
+            'Name' => 'company_name',
+            'Email' => 'email',
+            'Phone' => 'phone_number',
+            'Country' => ['country', 'short']
+        ],
+        'contact' => [
+            'FirstName' => 'first_name',
+            'LastName' => 'last_name',
+            'Email' => 'email',
+            'Phone' => 'phone_number',
+        ],
+    ],
+    'visible_user_fields' => [
+        'CustomerName',
+        'Email',
+        'FullName',
+        'Phone',
+        'UserName',
+        // 'UserID',
+        // 'BirthDate',
+        // 'BirthName',
+        // 'Created',
+        // 'Creator',
+        // 'CreatorFullName',
+        // 'Customer',
+        // 'EndDate',
+        // 'FirstName',
+        // 'Gender',
+        // 'HasRegisteredForTwoStepVerification',
+        // 'HasTwoStepVerification',
+        // 'Initials',
+        // 'IsAnonymised',
+        // 'Language',
+        // 'LastLogin',
+        // 'LastName',
+        // 'MiddleName',
+        // 'Mobile',
+        // 'Modified',
+        // 'Modifier',
+        // 'ModifierFullName',
+        // 'Nationality',
+        // 'Notes',
+        // 'PhoneExtension',
+        // 'ProfileCode',
+        // 'StartDate',
+        // 'StartDivision',
+        // 'Title',
+        // 'UserRoles',
+        // 'UserRolesPerDivision',
+        // 'UserTypesList',
+    ]
+];
