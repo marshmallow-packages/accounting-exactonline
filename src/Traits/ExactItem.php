@@ -14,14 +14,13 @@ trait ExactItem
 
     public function getDataFromExact ()
     {
-        $account = $this->getExactOnlineModel();
-        $item = $account->filter("Code eq '" . $this->{$this->exactOnlineIdColumn()} . "'");
-        return $this->exactResponseToArray($item);
+        $item = $this->getExactOnlineModel();
+        return $item->find($this->exact->accounting_id);
     }
 
     protected function viewOnIndex ()
     {
-    	return ['ID', 'Name'];
+    	return ['Code', 'ID', 'Name'];
     }
     
     protected function getExactOnlineModel ()
@@ -29,10 +28,5 @@ trait ExactItem
         return new Item(
             $this->exactOnlineConnection()
         );
-    }
-
-    protected function exactOnlineIdColumn ()
-    {
-    	return 'accounting_id';
     }
 }

@@ -35,33 +35,6 @@ class CreateAccountInExactOnline implements ShouldQueue
      */
     public function handle()
     {
-        /**
-         * Maak de prospect aan
-         */
-        $connection = ExactOnlineConnect::connect();
-        $account = new Account($connection);
-        foreach ($this->account->exactOnlineMapping() as $key => $value) {
-            $account->{$key} = $value;
-        }
-        $account = $account->save();
-
-        /*
-         * Sla het ID van Exact Online op in de database
-         */
-        $this->account->exact()->create([
-            'accounting_id' => $account->ID,
-            'accounting_last_sync' => now(),
-        ]);
-
-        
-        /**
-         * Maak een contact aan die we koppelen aan de prospect
-         */
-        $contact = new \Picqer\Financials\Exact\Contact($connection);
-        $contact->Account = $account->ID;
-        foreach ($this->account->exactOnlineContactMapping() as $key => $value) {
-            $contact->{$key} = $value;
-        }
-        $contact->save();
+        $this->account->syncToAccounting();
     }
 }

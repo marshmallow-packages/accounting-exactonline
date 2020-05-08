@@ -22,7 +22,7 @@ return [
         'FullName',
         'Phone',
         'UserName',
-        // 'UserID',
+        'UserID',
         // 'BirthDate',
         // 'BirthName',
         // 'Created',
