@@ -4,11 +4,9 @@ namespace Marshmallow\ExactOnline\Console;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Process\Process;
-use Illuminate\Support\Facades\Artisan;
 
 class InstallCommand extends Command
 {
-
     /**
      * The name and signature of the console command.
      *
@@ -53,14 +51,14 @@ class InstallCommand extends Command
         );
     }
 
-    protected function relativeToolPath ()
+    protected function relativeToolPath()
     {
-    	return str_replace(base_path() . '/', '', $this->toolPath());
+        return str_replace(base_path() . '/', '', $this->toolPath());
     }
 
-    protected function toolPath ()
+    protected function toolPath()
     {
-    	return str_replace('/src/Console', '', __dir__);
+        return str_replace('/src/Console', '', __dir__);
     }
 
     /**

@@ -3,14 +3,10 @@
 namespace Marshmallow\ExactOnline\Jobs;
 
 use Illuminate\Bus\Queueable;
-use Picqer\Financials\Exact\Account;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Marshmallow\ExactOnline\Helpers\ConfigHelper;
-use Marshmallow\ExactOnline\Helpers\MappingHelper;
-use Marshmallow\ExactOnline\Models\ExactOnlineConnect;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class CreateAccountInExactOnline implements ShouldQueue
 {

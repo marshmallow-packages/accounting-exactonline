@@ -3,7 +3,6 @@
 namespace Marshmallow\ExactOnline\Traits;
 
 use Picqer\Financials\Exact\Item;
-use Marshmallow\ExactOnline\Models\ExactOnlineConnect;
 
 trait ExactItem
 {
@@ -12,18 +11,19 @@ trait ExactItem
         //
     }
 
-    public function getDataFromExact ()
+    public function getDataFromExact()
     {
         $item = $this->getExactOnlineModel();
+
         return $item->find($this->exact->accounting_id);
     }
 
-    protected function viewOnIndex ()
+    protected function viewOnIndex()
     {
-    	return ['Code', 'ID', 'Name'];
+        return ['Code', 'ID', 'Name'];
     }
     
-    protected function getExactOnlineModel ()
+    protected function getExactOnlineModel()
     {
         return new Item(
             $this->exactOnlineConnection()

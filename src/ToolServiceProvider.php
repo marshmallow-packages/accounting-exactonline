@@ -2,12 +2,12 @@
 
 namespace Marshmallow\ExactOnline;
 
-use Laravel\Nova\Nova;
-use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Marshmallow\ExactOnline\Http\Middleware\Authorize;
+use Laravel\Nova\Events\ServingNova;
+use Laravel\Nova\Nova;
 use Marshmallow\ExactOnline\Console\InstallCommand;
+use Marshmallow\ExactOnline\Http\Middleware\Authorize;
 
 class ToolServiceProvider extends ServiceProvider
 {
@@ -21,7 +21,8 @@ class ToolServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'exact-online');
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->mergeConfigFrom(
-            __DIR__ . '/../config/exactonline.php', 'exactonline'
+            __DIR__ . '/../config/exactonline.php',
+            'exactonline'
         );
         
         $this->publishes([
