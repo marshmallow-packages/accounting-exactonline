@@ -20,11 +20,10 @@
         }
     ],
     "require": {
-        "php": ">=7.1.0",
+        "php": "^7.1|^8.0",
         "pendonl/laravel-exact-online": "dev-master"
     },
-    "require-dev": {
-    },
+    "require-dev": {},
     "autoload": {
         "psr-4": {
             "Marshmallow\\ExactOnline\\": "src"
